@@ -1,19 +1,19 @@
-item1 = { :name => "baseball bat", :price => 100, :color => "purple" }
-item2 = { name: "baseball glove", price: 120, color: "black" }
-item3 = { name: "batting gloves", price: 50, color: "white" }
+# item1 = { :name => "baseball bat", :price => 100, :color => "purple" }
+# item2 = { name: "baseball glove", price: 120, color: "black" }
+# item3 = { name: "batting gloves", price: 50, color: "white" }
 
-p item1[:name]
-p item2[:name]
-p item3[:color]
+# p item1[:name]
+# p item2[:name]
+# p item3[:color]
 
 class Item
   attr_reader :name, :price, :color
   attr_writer :name, :color
 
-  def initialize(name, price, color)
-    @name = name
-    @price = price
-    @color = color
+  def initialize(input_options)
+    @name = input_options[:name]
+    @price = input_options[:price]
+    @color = input_options[:color]
   end
 
   def details
@@ -46,7 +46,7 @@ class Item
   # end
 end
 
-item1 = Item.new("baseball glove", 120, "black")
+item1 = Item.new({ name: "baseball glove", price: 120, color: "black" })
 item1.details
 item1.color = "blue"
 item1.name = "BASEBALL GLOVE"
