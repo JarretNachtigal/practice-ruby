@@ -7,6 +7,9 @@ p item2[:name]
 p item3[:color]
 
 class Item
+  attr_reader :name, :price, :color
+  attr_writer :name, :color
+
   def initialize(name, price, color)
     @name = name
     @price = price
@@ -17,30 +20,30 @@ class Item
     puts "a #{color} #{name} is worth #{@price} dollars."
   end
 
-  def name
-    @name
-  end
+  # def name
+  #   @name
+  # end
 
-  def name=(name)
-    @name = name
-  end
+  # def name=(name)
+  #   @name = name
+  # end
 
-  def price
-    @price
-  end
+  # def price
+  #   @price
+  # end
 
   # maybe dont want this one
   # def price=(price)
   #   @price = price
   # end
 
-  def color
-    @color
-  end
+  # def color
+  #   @color
+  # end
 
-  def color=(color)
-    @color = color
-  end
+  # def color=(color)
+  #   @color = color
+  # end
 end
 
 item1 = Item.new("baseball glove", 120, "black")
