@@ -1,4 +1,3 @@
-require "./item.rb"
 require "./food.rb"
 
 item1 = Item.new({ name: "baseball glove", price: 120, color: "black" })
