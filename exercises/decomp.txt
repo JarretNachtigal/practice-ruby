@@ -1,0 +1,24 @@
+Class scoreboard
+[]players - keep track of each player
+@turn - turn number
+
+Class player
+turns[]
+@score
+
+
+def turn - 2 throws -- score += pins
+
+main ---------
+game loop
+
+- make classes
+
+- make methods / instance variables
+  start with initialize
+
+- test class creation
+
+- bugfix
+
+- make main loop go through a number of turns - score_board.turn method

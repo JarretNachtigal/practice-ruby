@@ -1,102 +1,45 @@
-# 1 -----------
-
-# puts "Hello!"
-# greeting = gets.chomp()
-# if greeting == "Arrr!"
-#   puts "Go away, pirate."
-# elsif puts "Greetings, hater of pirates!"
+# foods = []
+# 5.times do |i|
+#   puts "gimme a food"
+#   foods << gets.chomp
 # end
-
-# 2 -----------
-
-# dickens = { name: "Charles Dickens,", year: "1870" }
-# thackeray = { name: "William Thackeray", year: "1863" }
-# trollope = { name: "Anthony Trollope", year: "1882" }
-# hopkins = { name: "Gerard Manley Hopkins", year: "1889" }
-
-# def died(array)
-#   name = array[:name]
-#   year = array[:name]
-#   puts "#{name} died in #{year}."
+# i = 1
+# foods.each do |food|
+#   p "#{i}. #{food}"
+#   i += 1
 # end
+#arr = ["q"]
+#p arr.include?("q")
+# bank << { first: first_name, last: last_name, email: email }
+# p rand(1000000000, 9999999999)
 
-# puts died(dickens)
-# puts died(thackeray)
-# puts died(trollope)
-# puts died(hopkins)
+students = []
+input = ""
 
-# 3 ------------
+while input.downcase != "end"
+  input = gets.chomp
+  students << input
+end
 
-# puts "Greetings! What is your year of origin?"
-# origin = gets.chomp.to_i
-# if origin < 1900
-#   puts 'That\'s the past!'
-# elsif origin > 1900 && origin < 2020
-#   puts "That's the present!"
-# else
-#   puts "That's the future!"
-# end
+number_of_groups = students.length / 2
+group = []
+i = 0
+# p number_of_groups
+if number_of_groups.even?
+  number_of_groups.times do
+    student = "#{students[i]} #{students[i + 1]}"
+    group << student
+    i += 2
+  end
+else
+  number_of_groups -= 1
+  number_of_groups.times do
+    student = "#{students[i]} #{students[i + 1]}"
+    group << student
+    i += 2
+  end
+  p "did this"
+  group[0] = "#{group[0]} #{students[-2]}"
+end
 
-# 4 -----------
-
-# class Person
-#   def initialize(first_name, last_name)
-#     @first_name = first_name
-#     @last_name = last_name
-#   end
-
-#   def to_string
-#     return "#{@last_name}, #{@first_name}"
-#   end
-# end
-
-# tj = Person.new("Thomas", "Jefferson")
-# puts tj.to_string
-# puts tj
-
-# 5 -------------
-
-# puts "Input exam grade one:"
-# exam_one = gets.chomp.to_i
-
-# puts 'Input exam grade two:'
-# exam_two = gets.chomp.to_i
-
-# puts "Input exam grade three:"
-# exam_three = gets.chomp.to_i
-
-# def list_grade(exam_one, exam_two, exam_three)
-#   puts "Exams: #{exam_one}, #{exam_two}, #{exam_three}"
-# end
-
-# def average_grade(exam_one, exam_two, exam_three)
-#   average = (exam_one + exam_two + exam_three) / 3
-# end
-# average = avrage_grade(exam_one, exam_two, exam_three).to_i
-
-# def letter_grade(average_grade)
-#   if average_grade < 59
-#     puts "Grade: F"
-#   elseif average_grade >= 60 && average_grade <= 69
-#     puts "Grade: D"
-#   elsif average_grade > 70 & average_grade <= 79
-#     puts "Grade: C"
-#   elsif average_grade >= 80 && average_grade <= 89
-#     puts "Grade: B"
-#   elsif average_grade >= 90
-#     puts "Grade: A"
-# end
-
-# def pass_fail(average)
-#   if average < 59
-#     puts "Student is failing."
-#   else
-#     puts "Student is passing."
-#   end
-# end
-
-# average = average_grade(exam_one, exam_two, exam_three)
-# list_grade(exam_one, exam_two, exam_three)
-# puts "Average: #{average}"
-# letter_grade(average) 	 
-# pass_fail(average)
+p group
