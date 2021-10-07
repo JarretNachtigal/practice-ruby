@@ -5,7 +5,9 @@ class Vehicle
     @speed = options[:speed].to_i
     @direction = options[:direction]
   end
+end
 
+module Moves
   def brake
     @speed = 0
   end
@@ -20,6 +22,8 @@ class Vehicle
 end
 
 class Car < Vehicle
+  include Moves
+
   def initialize(options)
     super
     @fuel = options[:fuel].to_i
@@ -33,6 +37,8 @@ class Car < Vehicle
 end
 
 class Bike < Vehicle
+  include Moves
+
   def initialize(options)
     super
     @type = options[:type]
