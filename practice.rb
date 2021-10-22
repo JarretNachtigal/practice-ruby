@@ -118,3 +118,47 @@
 # end
 
 # p two_smallest(array)
+
+# ------------ bonus 2 -----------------
+
+# num = 1
+
+# def prime?(num) # returns true if the num is prime
+#   # if number is 1
+#   if num == 1
+#     return false
+#   end
+#   # if the number is even (excluding 2) then is it not prime
+#   if num.even? && num != 2
+#     return false
+#   end
+#   # if the number is odd
+#   max_divisor = (num-1) / 2 # i will count up to half of num-1
+#   i = 3
+#   while i <= max_divisor
+#     if num % i == 0 # (10 % 3)
+#       return false # if 0, not a prime
+#     end
+#     i +=1
+#   end
+#   return true # is prime
+# end
+
+# # p "#{num} is a prime #{prime?(num)}"
+
+# def primes(n) # n being number of primes wanted
+#   i = 1
+#   primes_arr = []
+#   while primes_arr.length <= n
+#     if prime?(i) == true ########
+#       primes_arr << i
+#     end
+#     i +=1
+#   end
+#   return primes_arr
+# end
+
+# p primes(10)
+
+
+# ----------- bonus 3 ---------------
